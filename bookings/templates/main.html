@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    
+    {% load static%}
+    <link rel="stylesheet" type="text/css" href="{% static 'first.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'header.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'outro.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'middle.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="phoneno">
+            <img src="../static/images/phone.png" alt="" class="dial">
+            0794922166
+        </div>
+        <div class="email">
+            <img src="../static/images/email.png" alt="" class="email-address">
+            movers.gmail.com
+        </div>
+        <div class="address">
+            <img src="../static/images/location.jpeg" alt="" class="location">
+            00100 Nairobi railways
+        </div>
+        <div class="socials">
+            <img src="../static/images/facebook.png" alt="">
+            <img src="../static/images/twitter.png" alt="">
+            <img src="../static/images/instagram.jpeg" alt="">
+        </div>
+    </div>
+
+    <div class="welcome">
+        <div class="navbar-2">
+            <img src="../static/images/icon.jpg" alt="" class="icon">
+
+            <a href="first.html" class="home">home</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">about</button>
+                <div class="dropdown-content">
+                    <a href="#">our motto</a>
+                    <a href="#">history</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">destination</button>
+                <div class="dropdown-content">
+                    <a href="#">our motto</a>
+                    <a href="#">history</a>
+                </div>
+            </div>
+
+            <a href="#" class="tracking">Tracking</a>
+        </div>
+        
+    </div>
+
+    <div class="body-booking">
+        <div class="welcome-info">
+            <p>Comfort with style per every mile</p>
+            <p>Leading No.1 website for booking</p>
+        </div>
+
+        <div class="booking">
+            <form method="POST" class="fill-out">
+                <fieldset>
+                    {% csrf_token %}
+                    <input type="text" placeholder="NAME" class="name" name="name">
+                    <input type="number" placeholder="ID Number" class="ID" name="ID">
+
+                    <select name="destination" required>
+                        <option value="select"> Destination</option>
+                        <option value="1">Mombasa</option>
+                        <option value="2"> Nakuru</option>
+                    </select>
+
+                    <select name="seat_no" required>
+                        <option value="select">No of tickets</option>
+                        <option value ="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+
+                    <input type="submit" value="Book">
+                </fieldset>
+                
+            </form>
+        </div>
+    </div>
+
+    <div class="outro">
+        <div class="drivers">
+            <img src="../static/images/drivers/images (2).jpeg" alt="driver" class="driverimg">
+            <p>Olivier <br> <span class="experience">6 Years of experience</span></p>
+        </div>
+
+        <div class="drivers">
+            <img src="../static/images/drivers/images (1).jpeg" alt="driver" class="driverimg">
+            <p>Olivier <br> <span class="experience">2 Years of experience</span></p>
+        </div>
+
+        <div class="drivers">
+            <img src="../static/images/drivers/images.jpeg" alt="driver" class="driverimg">
+            <p>Olivier <br> <span class="experience">10 Years of experience</span></p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    {% load static%}
+    <link rel="stylesheet" type="text/css" href="{% static 'header.css' %}">
+    <style>
+        body{
+            background-color: aqua;
+        }
+
+        .pay-form{
+            justify-content: center;
+            background-color: white;
+            padding: 16px;
+            border-radius: 15px;
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+
+        .proceed{
+            position: absolute;
+            top: 0;
+        }
+
+        input[type="text"]{
+            padding: 20px;
+            border-radius: 7px;
+            border: none;
+            display: block;
+            margin-bottom: 15px;
+            width: 200px;   
+            box-shadow: 2px 2px 8px rgb(217, 214, 214);
+        }
+
+        input[type="submit"]{
+            display: block;
+            color: white;
+            border: none;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: rgb(14, 12, 12);
+            transition: box-shadow 0.3s;
+            transition: font-size 0.3s;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        input[type="submit"]:hover {
+            cursor: pointer;
+            box-shadow: 1px 1px 8px rgb(138, 208, 214);
+            font-size: large;
+        }
+
+        .balance{
+            position: absolute;
+            bottom: 0;
+        }
+
+    </style>
+</head>
+<body style="margin: 0;">
+    <div class="navbar" style="background-color: white;">
+        <div class="phoneno">
+            <img src="../static/images/phone.png" alt="" class="dial">
+            0794922166
+        </div>
+        <div class="email">
+            <img src="../static/images/email.png" alt="" class="email-address">
+            movers.gmail.com
+        </div>
+        <div class="address">
+            <img src="../static/images/location.jpeg" alt="" class="location">
+            00100 Nairobi railways
+        </div>
+        <div class="socials">
+            <img src="../static/images/facebook.png" alt="">
+            <img src="../static/images/twitter.png" alt="">
+            <img src="../static/images/instagram.jpeg" alt="">
+        </div>
+    </div>
+
+    <div class="pay-form">
+        <p class="proceed">
+            Proceed below to pay for tickets
+        </p>
+
+        <form method="POST">
+            <fieldset style="border: none;">
+                {% csrf_token %}
+                <input type="text" placeholder="Enter no for paying">
+                <input type="submit" value="confirm">
+            </fieldset>
+        </form>
+
+        <p class="balance">
+            Your unpaid balance is 940.
+        </p>
+    </div>
+</body>
+</html>

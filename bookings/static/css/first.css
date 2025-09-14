@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    min-width: 500px;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+.body-booking {
+    display: flex;
+
+}
+
+.welcome-info {
+    margin-left: 40px;
+    margin-top: 40px;
+    color: aqua;
+    font-weight: bold;
+    font-size: 40px;
+    flex: 1;
+    font-family: monospace;
+}
+

@@ -1,0 +1,122 @@
+.navbar{
+    display: flex;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    height: 25px;
+}
+
+.phoneno{
+    display: flex;
+    margin-right: 15px;
+    margin-left: 80px;
+}
+
+.email{
+    display: flex;
+    margin-right: 15px;
+}
+
+.address{
+    display: flex;
+    margin-right: 50px;
+
+}
+
+.location,
+.dial,
+.email-address{
+    margin-right: 5px;
+}
+
+.navbar-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    height: 100px;
+    font-weight: bold;
+}
+
+.icon{
+    height: 70px;
+    border-radius: 17px;
+    margin-right: 70px;
+}
+
+.home{
+    color: white;
+    padding: 16px;
+    transition: box-shadow 0.3s;
+    transition: color 0.3s;
+    transition: background-color 0.3s;
+}
+
+.home:hover{
+    background-color: white;
+    color: aqua;
+    box-shadow: 1px 1px 8px rgb(138, 208, 214);
+}
+
+.dropbtn {
+    background-color: aqua;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    transition: box-shadow 0.3s;
+    transition: color 0.3s;
+    transition: background-color 0.3s;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: white;
+    color: aqua;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {
+    background-color: white;
+    color: aqua;
+    box-shadow: 1px 1px 8px rgb(138, 208, 214);
+}
+
+.tracking{
+    color: white;
+    padding: 16px;
+    transition: box-shadow 0.3s;
+    transition: color 0.3s;
+    transition: background-color 0.3s;
+}
+
+.tracking:hover{
+    background-color: white;
+    color: aqua;
+    box-shadow: 1px 1px 8px rgb(138, 208, 214);
+    
+}

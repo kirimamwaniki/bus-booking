@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+
+        .congrats{
+            font-family: Verdana;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+        }
+
+        .check{
+            border-radius: 50%;
+            width: 50px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .thanks-note{
+            font-weight: bold;
+            font-size: large;
+        }
+
+        .qr{
+            box-shadow: 2px 2px 8px rgb(197, 195, 195);
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="congrats">
+        {%load static%}
+        <img src="../static/images/download.png" alt="" class="check">
+        <p class="thanks-note">
+            Thank you for choosing to travel with us.
+        </p>
+
+        <p class="scan-note">
+            Scan the qr code below for your details
+        </p>
+
+        <img src="data:image/png;base64,{{ qr_code }}" width="200" height="200" style="border: 1px solid #000;" alt="QR Code" class="qr">
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+.body-booking{
+    margin-bottom: 15px;
+}
+
+.booking{
+    flex: 1;
+    margin-top: 40px;
+    margin-left: 40px;
+    justify-content: center;
+}
+
+.fill-out{
+    border-radius: 5px;
+    width: 300px;
+    display: block;
+    padding: 16px;
+    justify-content: center;
+    background-color: aqua;
+    box-shadow: 1px 1px 8px rgb(209, 204, 204);
+}
+
+fieldset{
+    border: none;
+}
+
+.name{
+    border: none;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.ID{
+    border: none;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+select{
+    border: none;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input[type="submit"]{
+    color: white;
+    border: none;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(14, 12, 12);
+    transition: box-shadow 0.3s;
+    transition: font-size 0.3s;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 8px rgb(138, 208, 214);
+    font-size: large;
+}
