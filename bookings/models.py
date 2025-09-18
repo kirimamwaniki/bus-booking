@@ -6,5 +6,6 @@ class customer(models.Model):
     destination = models.CharField(max_length=255)
     No_of_tickets = models.IntegerField(null=True)
     paid = models.CharField(default='not paid')
+    receipt = models.IntegerField(default=0)
 
 # Create your models here.

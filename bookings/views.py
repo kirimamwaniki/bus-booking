@@ -14,7 +14,8 @@ def main(request):
             id_number = request.POST['ID'],
             name = request.POST['name'],
             destination = request.POST['destination'],
-            No_of_tickets = request.POST['seat_no']
+            No_of_tickets = request.POST['seat_no'],
+            receipt = ticket_price(request.POST['seat_no'])
         )
 
         customer_obj.save()
@@ -51,5 +52,10 @@ def success(request, id):
 
 
     return render(request, 'success.html', {'qr_code': img_str})
+
+
+    def ticket_price(x):
+        price = 500
+        due_pay = x * price
 
 # Create your views here.
