@@ -1,5 +1,6 @@
 .body-booking{
     margin-bottom: 15px;
+    padding: 300px;
 }
 
 .booking{
@@ -30,7 +31,7 @@ fieldset{
     border-radius: 5px;
     font-family: 'Courier New', Courier, monospace;
 }
-
+ 
 .ID{
     border: none;
     margin-bottom: 20px;
