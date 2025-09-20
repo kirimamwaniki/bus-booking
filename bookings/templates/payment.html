@@ -106,12 +106,9 @@
                 <input type="submit" value="confirm">
             </fieldset>
         </form>
-
+        
         <p class="balance">
-            Your unpaid balance is 
-            {% for x in customers %}
-            {% x.receipt %}
-            {% end for %}
+            Your unpaid balance is {{ customer.receipt }}
         </p>
     </div>
 </body>

@@ -15,7 +15,7 @@ def main(request):
             name = request.POST['name'],
             destination = request.POST['destination'],
             No_of_tickets = request.POST['seat_no'],
-            receipt = ticket_price(request.POST['seat_no'])
+            receipt = ticket_price(int(request.POST['seat_no'])),
         )
 
         customer_obj.save()
@@ -27,6 +27,7 @@ def main(request):
 def pay(request, id):
     #getting customer details from the main.html
     x = customer.objects.get(id_number=id)
+    x.receipt = ticket_price(x.No_of_tickets)
 
     # initiating a payment
     if x.paid == "not paid":
@@ -37,7 +38,7 @@ def pay(request, id):
             #redirecting to success page
             return redirect('success', id=x.id_number) 
 
-    return render(request, 'payment.html')
+    return render(request, 'payment.html', {'customer': x})
 
 def success(request, id):
     #getting customer number
@@ -57,5 +58,6 @@ def success(request, id):
 def ticket_price(x):
     price = 500
     due_pay = x * price
+    return due_pay
 
 # Create your views here.
