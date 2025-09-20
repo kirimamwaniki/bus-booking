@@ -108,7 +108,10 @@
         </form>
 
         <p class="balance">
-            Your unpaid balance is 940.
+            Your unpaid balance is 
+            {% for x in customers %}
+            {% x.receipt %}
+            {% end for %}
         </p>
     </div>
 </body>

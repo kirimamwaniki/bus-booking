@@ -54,8 +54,8 @@ def success(request, id):
     return render(request, 'success.html', {'qr_code': img_str})
 
 
-    def ticket_price(x):
-        price = 500
-        due_pay = x * price
+def ticket_price(x):
+    price = 500
+    due_pay = x * price
 
 # Create your views here.
